@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lakshman — Computational Neuroscience &amp; NeuroAI</title>
+<meta name="description" content="Research on compositional generalization, representational geometry, and mechanistic interpretability.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-name">Lakshman&nbsp;[Surname]</span>
+      <span class="brand-tag">compositional cognition — neuro → neuroAI</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="#vision">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#cv">CV</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">PhD Candidate · Computational Neuroscience</p>
+      <h1>Understanding how minds<br>compose the world.</h1>
+      <p class="hero-lede">
+        I study the computational principles behind flexible, compositional
+        cognition — how a small set of primitive operations recombine to
+        support novel behavior — using empirical, data-driven methods across
+        neural recordings, RNNs, and transformer models.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">See the work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="hero-diagram" aria-hidden="true">
+      <svg viewBox="0 0 320 320" class="compose-svg">
+        <!-- primitives -->
+        <g class="prim" data-i="1">
+          <rect x="30" y="40" width="40" height="40" rx="4"/>
+        </g>
+        <g class="prim" data-i="2">
+          <rect x="30" y="140" width="40" height="40" rx="4"/>
+        </g>
+        <g class="prim" data-i="3">
+          <rect x="30" y="240" width="40" height="40" rx="4"/>
+        </g>
+        <!-- connecting paths -->
+        <path class="wire" d="M70 60 C 140 60, 140 160, 200 160" />
+        <path class="wire" d="M70 160 C 140 160, 140 160, 200 160" />
+        <path class="wire" d="M70 260 C 140 260, 140 160, 200 160" />
+        <!-- composed representation -->
+        <g class="composed">
+          <rect x="200" y="130" width="60" height="60" rx="4" transform="rotate(45 230 160)"/>
+        </g>
+        <text x="30" y="30" class="svg-label">primitives</text>
+        <text x="175" y="230" class="svg-label">composition</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH VISION ============ -->
+<section id="vision" class="vision">
+  <div class="wrap vision-inner">
+    <p class="eyebrow">Research vision</p>
+    <div class="vision-body">
+      <p class="pull">
+        Humans are one solution to adaptive, compositional cognition —
+        not necessarily the best experimental preparation for studying it.
+      </p>
+      <p>
+        [DRAFT — replace with your own voice] My work sits at the intersection
+        of computational neuroscience and AI interpretability, organized around
+        a single long-standing question: what are the computational primitives
+        that let a system generalize flexibly to novel situations, and how do
+        they combine? Early experimental psychology and fMRI work gave me the
+        empirical instincts; a materials-engineering background gave me a taste
+        for mechanism over description. Both point the same direction — toward
+        empirical, data-grounded frameworks (in the spirit of Stefano Fusi's
+        approach to representational geometry) rather than purely theoretical
+        or purely behavioral accounts.
+      </p>
+      <p>
+        Increasingly, I test these questions in artificial systems as well as
+        biological ones — not as an abandonment of neuroscience, but as an
+        expansion of the experimental substrate. Large language models and
+        trained RNNs offer full access to the underlying computation in a way
+        biological circuits rarely do, making them a powerful complementary
+        tool for asking the same questions about compositional generalization,
+        representational geometry, and mechanistic structure.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="projects">
+  <div class="wrap">
+    <p class="eyebrow">Selected projects</p>
+    <h2 class="section-title">What I'm working on</h2>
+
+    <div class="project-list">
+
+      <!-- Project 1 -->
+      <article class="project">
+        <div class="project-meta">
+          <svg class="mini-compose" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="4" y="4" width="10" height="10" rx="2"/>
+            <rect x="4" y="26" width="10" height="10" rx="2"/>
+            <rect x="24" y="15" width="14" height="14" rx="2" transform="rotate(45 31 22)"/>
+          </svg>
+          <span class="status status-accepted">CCN 2026 · Accepted</span>
+        </div>
+        <div class="project-body">
+          <h3>CPRO-RNN</h3>
+          <p class="project-sub">Core dissertation project — context-dependent representational organization for compositional generalization</p>
+          <p>
+            RNNs trained on compositional tasks recover generalization to novel
+            task combinations only when co-trained on their primitive
+            sub-tasks — a co-training regime that is both necessary and
+            sufficient in low-data settings. The resulting representations
+            show a distinct clustering signature that aligns with
+            Next-Primitive-Prediction-style accounts of compositional
+            structure. Preliminary single-unit analyses suggest an ordered
+            algorithmic sequence (attend → evaluate congruence → logical
+            combination → motor integration → closure detection); this is
+            flagged as a preliminary observation pending SAE / decoding
+            follow-up, not a settled claim.
+          </p>
+          <div class="tags">
+            <span>RNNs</span><span>compositional generalization</span><span>representational geometry</span>
+          </div>
+          <div class="project-links">
+            <a href="#">Paper (CCN proceedings) →</a>
+            <a href="#">Code →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project">
+        <div class="project-meta">
+          <svg class="mini-compose" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="4" y="4" width="10" height="10" rx="2"/>
+            <rect x="4" y="26" width="10" height="10" rx="2"/>
+            <rect x="24" y="15" width="14" height="14" rx="2" transform="rotate(45 31 22)"/>
+          </svg>
+          <span class="status status-ongoing">Ongoing · with Taku Ito</span>
+        </div>
+        <div class="project-body">
+          <h3>White-Box Universal Transformers</h3>
+          <p class="project-sub">Exact, hand-derivable algorithmic solutions to compositional reasoning tasks</p>
+          <p>
+            Building universal transformers whose weights implement provably
+            exact algorithms for compositional tasks. Boolean expression
+            evaluation has a complete, hand-derived formal proof of
+            correctness. Modular arithmetic and ListOps show the same
+            perfect-generalization behavioral signature under standard
+            training — suggestive of, but not proof of, an equivalent exact
+            algorithm in the trained (non-hand-derived) case. Currently
+            extending the approach to SCAN, COGS, and PCFG, with the aim of
+            providing ground-truth oracles for open questions about minimal
+            generating sets of compositional operations.
+          </p>
+          <div class="tags">
+            <span>transformers</span><span>mechanistic interpretability</span><span>formal verification</span>
+          </div>
+          <div class="project-links">
+            <a href="#">Preprint (in prep) →</a>
+            <a href="#">Code →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project">
+        <div class="project-meta">
+          <svg class="mini-compose" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="4" y="4" width="10" height="10" rx="2"/>
+            <rect x="4" y="26" width="10" height="10" rx="2"/>
+            <rect x="24" y="15" width="14" height="14" rx="2" transform="rotate(45 31 22)"/>
+          </svg>
+          <span class="status status-published">Published · Nature Neuroscience</span>
+        </div>
+        <div class="project-body">
+          <h3>MDTB-Actflow</h3>
+          <p class="project-sub">Linking task representational geometry to functional connectivity</p>
+          <p>
+            Used activity-flow modeling to show how task-representational
+            structure across the cortex relates to underlying functional
+            connectivity patterns, in the Multi-Domain Task Battery
+            (MDTB) dataset — connecting representational-geometry accounts of
+            task structure to network-level mechanisms.
+          </p>
+          <div class="tags">
+            <span>fMRI</span><span>activity flow modeling</span><span>functional connectivity</span>
+          </div>
+          <div class="project-links">
+            <a href="#">Paper →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project">
+        <div class="project-meta">
+          <svg class="mini-compose" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="4" y="4" width="10" height="10" rx="2"/>
+            <rect x="4" y="26" width="10" height="10" rx="2"/>
+            <rect x="24" y="15" width="14" height="14" rx="2" transform="rotate(45 31 22)"/>
+          </svg>
+          <span class="status status-ongoing">Ongoing collaborations</span>
+        </div>
+        <div class="project-body">
+          <h3>Other collaborations</h3>
+          <p class="project-sub">Value representation, context-dependent decision-making, and analogical reasoning</p>
+          <p>
+            Value representations in orbitofrontal cortex (with Vince);
+            context-dependent decision-making (with Alon); and an ongoing
+            project on the computational structure of analogical reasoning.
+          </p>
+          <div class="tags">
+            <span>OFC</span><span>decision-making</span><span>analogy</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section id="publications" class="publications">
+  <div class="wrap">
+    <p class="eyebrow">Publications</p>
+    <h2 class="section-title">Papers</h2>
+    <ol class="pub-list">
+      <li>
+        <span class="pub-year">[Year]</span>
+        <span class="pub-text">[Authors]. <em>MDTB-Actflow: linking task representational geometry to functional connectivity.</em> Nature Neuroscience. [Update citation]</span>
+      </li>
+      <li>
+        <span class="pub-year">2026</span>
+        <span class="pub-text">[Authors]. <em>CPRO-RNN: co-training on primitives recovers compositional generalization.</em> CCN 2026 Proceedings. [Update citation]</span>
+      </li>
+      <li>
+        <span class="pub-year">In prep</span>
+        <span class="pub-text">[Authors]. <em>White-box universal transformers for compositional reasoning.</em> [Update when ready]</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CV + CONTACT ============ -->
+<footer id="contact" class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <p class="eyebrow">Get in touch</p>
+      <h2 class="section-title">Let's talk</h2>
+      <p class="footer-lede">
+        Finishing my PhD and looking toward postdoctoral opportunities at the
+        intersection of computational neuroscience and AI interpretability.
+        [Add target start window, e.g. "Available from Summer 2027."]
+      </p>
+      <ul class="contact-list">
+        <li><a href="mailto:you@example.edu">you@example.edu</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Google Scholar →</a></li>
+        <li><a href="#" target="_blank" rel="noopener">GitHub →</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn →</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-cv" id="cv">
+      <p class="eyebrow">Curriculum Vitae</p>
+      <a href="assets/cv.pdf" class="btn btn-primary" download>Download CV (PDF)</a>
+      <p class="cv-note">[Add cv.pdf to the assets folder once your CV is updated]</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>&copy; <span id="year"></span> Lakshman [Surname]. Built with plain HTML/CSS, hosted on GitHub Pages.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
